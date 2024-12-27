@@ -2,8 +2,10 @@ name: Age Checker Workflow
 
 on:
   push:
+    branches:
+      - test-branch  # sadece test-branch üzerinde tetiklenir
     paths:
-      - input.txt
+      - 'input.txt'  # input.txt dosyasının yüklenmesiyle tetiklenir
 
 jobs:
   process-age:
