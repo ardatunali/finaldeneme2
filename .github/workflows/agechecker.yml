@@ -15,7 +15,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.ACTIONS_PAT }}  # PAT kullanarak checkout işlemi yapılacak
+          token: ${{ secrets.PAT }}  # PAT kullanarak checkout işlemi yapılacak
 
       - name: Set up Python
         uses: actions/setup-python@v3
@@ -27,13 +27,13 @@ jobs:
 
       - name: Run Age Checker Script
         run: |
-          python age_checker.py input.txt araliginiz.txt
+          python main.py input.txt araliginiz.txt
 
       - name: Commit and Push Results
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.ACTIONS_PAT }}@github.com/ardatunali/finaldeneme2.git
+          git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/ardatunali/finaldeneme2.git
           git add araliginiz.txt
           git commit -m "Add result for input age"
           git push origin test-branch
