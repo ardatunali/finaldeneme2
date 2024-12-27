@@ -40,4 +40,4 @@ jobs:
           git remote set-url origin https://x-access-token:${PAT}@github.com/ardatunali/finaldeneme2.git
           git add araliginiz.txt
           git commit -m "Add result for input age"
-          git push origin test-branch  # Test branch'e push yap
+          git push origin test-branch --force # Test branch'e push yap
