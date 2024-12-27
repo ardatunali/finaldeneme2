@@ -23,7 +23,7 @@ jobs:
 
       - name: Run Age Checker Script
         run: |
-          python age_checker.py input.txt araliginiz.txt
+          python main.py input.txt araliginiz.txt
 
       - name: Commit and Push Results
         run: |
