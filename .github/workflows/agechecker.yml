@@ -5,7 +5,7 @@ on:
     branches:
       - test-branch  # Sadece test-branch üzerinde tetiklenir
     paths:
-      - 'input.txt'  # input.txt dosyasının yüklenmesiyle tetiklenir
+      - input.txt  # input.txt dosyasının yüklenmesiyle tetiklenir
 
 jobs:
   process-age:
